@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SuperSmartService</title>
+    <meta name="google-site-verification" content="YB9QVM4Ss4XwyisNqIbuX6-vgMXAo876OeEyuqt3KqI" />
+    <meta name="description" content="Super Smart Service.com - Ecommerce Fulfilment Solutions Super Smart Service provides global fulfilment solutions to scale your business. With over 20 warehouses worldwide occupying over 2.5 million square feet, Super Smart Service ships over 30 million orders annually.  Super Smart Service also offers many value added services such as returns processing, removal orders, Amazon SFP & Vendor Central, and other Amazon services. Contact Super Smart Service today to help with your fulfilment, logistics, and storage needs.">
+    <meta name="keywords" content="Super Smart Service.com,Super Smart Service,Super Smart Service">
+    <script type="text/javascript" src="assets/site-1.js"></script>
+    <style>
+        body {
+            min-width: 1200px;
+        }
+        @media  screen and (max-width:1000px) {
+            #layui-layer1 {
+                left: 50% !important;
+                margin-left: -400px !important;
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="styles.css?v=ms6lk9gy" />
+</head>
+<body>
+<meta name="csrf-token" content="">
+    
+    <div class="fixedHeight">
+    <div class="header fixedHead">
+        <div class="wrapper fclear">
+            <div class="logo">
+                <h1><a href="index.html" alt="Super Smart Service"><img src="assets/img-1.png" alt="Super Smart Service.com" /></a></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="eg-navli eg-dropdown"><a class="eg-tab" href="javascript:;">services</a>
+                        <div class="eg-sub">
+                            <ul>
+                                <li><a href="ecommerce.html">E-commerce Fulfilment</a></li>
+                                <li><a href="warehousing.html">Warehousing and Distribution</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="eg-navli eg-dropdown"><a class="eg-tab" href="javascript:;">About US</a>
+                        <div class="eg-sub">
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="careers.html">Join Our Team</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="taxstrategy.html">Tax Strategy 2022</a></li>
+                                <li><a href="sustainability.html">Sustainability</a></li>
+                                <li><a href="gender-pay-gap.html">Gender Pay Gap Report</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="eg-navli"><a class="eg-tab" href="pricing.html">Pricing</a></li>
+                    <li class="eg-navli"><a class="eg-tab" href="ournetwork.html">Our Network</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd-Right">
+                <a class="started-btn" href="javascript:void(0);">Get Started</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="getstarted" class="hide">
+    <form action="" class="started-form layui-form" id="getStartedFormBox">
+        <div class="logo_up"><img src="assets/img-1.png" alt="Super Smart Service" /></div>
+        <ul>
+            <li class="form-item-helf">
+                <div class="elog-inline">
+                    <label class="elog-form-label" for="s-full-name"><i class="be">*</i> Name</label>
+                    <div class="elog-input-inline"><input type="text" id="s-full-name" maxlength="128" class="validate-field" data-field="full_name" name="s_full_name"></div>
+                </div>
+                <div class="elog-inline">
+                    <label class="elog-form-label" for="s-email"><i class="be">*</i> Email</label>
+                    <div class="elog-input-inline"><input type="text" id="s-email" maxlength="200" class="validate-field" data-field="email" name="s_email"></div>
+                </div>
+            </li>
+            <li class="form-item-helf">
+                <div class="elog-inline">
+                    <label class="elog-form-label" for="s-company"><i class="be">*</i> Company Name</label>
+                    <div class="elog-input-inline"><input type="text" id="s-company" maxlength="100" class="validate-field" data-field="company" name="s_company"></div>
+                </div>
+                <div class="elog-inline">
+                    <label class="elog-form-label" for="s-phone"><i class="be">*</i> Phone</label>
+                    <div class="elog-input-inline"><input type="tel" id="s-phone" maxlength="32" class="validate-field" data-field="phone" name="s_phone"></div>
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label">Service Interested in:</label>
+                <div class="elog-checkbox-group">
+                    <input type="checkbox" id="s-interest-fulfilment" name="s_interest" lay-skin="primary" title="Fulfilment" value="Fulfilment"><label for="s-interest-fulfilment">Fulfilment</label>
+                    <input type="checkbox" id="s-interest-logistics" name="s_interest" lay-skin="primary" title="Logistics" value="Logistics"><label for="s-interest-logistics">Logistics</label>
+                    <input type="checkbox" id="s-interest-storage" name="s_interest" lay-skin="primary" title="Storage" value="Storage"><label for="s-interest-storage">Storage</label>
+                    <input type="checkbox" id="s-interest-vas" name="s_interest" lay-skin="primary" title="Value Added Service" value="Value Added Service"><label for="s-interest-vas">Value Added Service</label>
+                    <input type="checkbox" id="s-interest-other" name="s_interest" lay-skin="primary" title="Other" value="Other"><label for="s-interest-other">Other</label>
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label" for="s-shipments">Approximate shipments per month:</label>
+                <div class="elog-input-inline">
+                    <input type="text" maxlength="32" id="s-shipments" class="validate-field" data-field="shipments" name="shipments">
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label" for="s-product-type">What type of products do you sell:</label>
+                <div class="elog-input-inline">
+                    <input type="text" maxlength="100" id="s-product-type" name="product_type">
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label">Where do you sell your products:</label>
+                <div class="elog-checkbox-group">
+                    <input type="checkbox" id="s-platform-ebay" name="s_platform" value="eBay" lay-skin="primary" title="eBay"><label for="s-platform-ebay">eBay</label>
+                    <input type="checkbox" id="s-platform-amazon" name="s_platform" value="Amazon" lay-skin="primary" title="Amazon"><label for="s-platform-amazon">Amazon</label>
+                    <input type="checkbox" id="s-platform-wish" name="s_platform" value="Wish" lay-skin="primary" title="Wish"><label for="s-platform-wish">Wish</label>
+                    <input type="checkbox" id="s-platform-walmart" name="s_platform" value="Walmart" lay-skin="primary" title="Walmart"><label for="s-platform-walmart">Walmart</label>
+                    <input type="checkbox" id="s-platform-wayfair" name="s_platform" value="Wayfair" lay-skin="primary" title="Wayfair"><label for="s-platform-wayfair">Wayfair</label>
+                    <input type="checkbox" id="s-platform-own" name="s_platform" value="My own website" lay-skin="primary" title="My own website"><label for="s-platform-own">My own website</label>
+                    <input type="checkbox" id="s-platform-other" name="s_platform" value="Other" lay-skin="primary" title="Other"><label for="s-platform-other">Other</label>
+                </div>
+                <div class="elog-input-inline" style="margin-top: 10px;">
+                    <label for="s-other-platform" class="sr-only">Other platform</label>
+                    <input type="text" maxlength="100" id="s-other-platform" name="s_other_platform">
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label">How did you hear of us:</label>
+                <div class="elog-checkbox-group">
+                    <input type="checkbox" id="s-way-google" name="s_way" value="Google" lay-skin="primary" title="Google"><label for="s-way-google">Google</label>
+                    <input type="checkbox" id="s-way-word" name="s_way" value="Word of Mouth" lay-skin="primary" title="Word of Mouth"><label for="s-way-word">Word of Mouth</label>
+                    <input type="checkbox" id="s-way-trade" name="s_way" value="Trade Show" lay-skin="primary" title="Trade Show"><label for="s-way-trade">Trade Show</label>
+                    <input type="checkbox" id="s-way-other" name="s_way" value="Other" lay-skin="primary" title="Other"><label for="s-way-other">Other</label>
+                </div>
+            </li>
+
+            <li class="form-item">
+                <label class="elog-form-label" for="additional_comments">Additional Comments:</label>
+                <div>
+                    <textarea id="additional_comments" name="additional_comments" maxlength="1000" style="width: 100%;height: 100px;border: 1px solid #ccc;padding: 5px"></textarea>
+                </div>
+            </li>
+            <li class="form-item">
+                <label class="elog-form-label agree-label" >
+                    <input type="checkbox" id="agree" lay-skin="primary" lay-filter="agreeCheck" >
+                    <div id="agree-text"><span>I have read and accepted</span> <a href="privacy.html" target="_blank" style="color: #008cff; text-decoration:underline;">Privacy Policy</a>.*</div>
+                </label>
+            </li>
+
+            <li class="form-item verifyBlock layui-hide">
+                <label class="elog-form-label" for="pub_verify_key">Verification Code:</label>
+                <div>
+                    <input type="text" maxlength="100" id="pub_verify_key" name="pub_verify_key">
+                    <img id="verifyCodeImg" onclick="vCodeObj.refreshVCode()" style="width: auto; height: auto; max-width: 100%; max-height: 100%;" alt="Verification code" src="">
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+<script type="text/javascript">
+    layui.use(['layer', 'form', 'element'], function() {
+
+        // 简历提交功能开始
+        function checkValue(value, key) {
+            switch (key) {
+                case 'full_name':
+                    if (value === '') {
+                        elMsg('Name is required.');
+                        return false;
+                    }
+                    break;
+                case 'email':
+                    if (value === '') {
+                        elMsg('Email is required.');
+                        return false;
+                    }
+                    if (!/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/i.test(value)) {
+                        elMsg('Email format error.');
+                        return false;
+                    }
+                    break;
+                case 'company':
+                    if (value === '') {
+                        elMsg('Company name is required.');
+                        return false;
+                    }
+                    break;
+                case 'phone':
+                    if (value === '') {
+                        elMsg('Phone is required.');
+                        return false;
+                    }
+                    if (!/^[0-9\-\s\(\)\+]+$/.test(value)) {
+                        elMsg('Phone invalid.');
+                        return false;
+                    }
+                    break;
+                case 'shipments':
+                    if (!/^[0-9]*$/.test(value)) {
+                        elMsg('The shipments must be a number.');
+                        return false;
+                    }
+                    break;
+            }
+            return true;
+        }
+
+        function elMsg(content, icon = 5, time = 2000) {
+            if (!content) {
+                return false;
+            }
+            layui.layer.msg(content, {
+                icon: icon,
+                time: time
+            });
+        }
+        $('.validate-field').on('blur', function() {
+            const value = $(this).val();
+            const field = $(this).data('field');
+            checkValue(value, field);
+        });
+
+        function submitStarted() {
+
+            if($("input#agree").is(":checked") !== true){
+                layer.msg("Please read and accepted Privacy Policy.");
+                return false;
+            }
+
+            let full_name = $("#s-full-name").val();
+            let email = $("#s-email").val();
+            let company = $("#s-company").val();
+            let phone = $("#s-phone").val();
+            let other_platform = $("#s-other-platform").val();
+            let shipments = $('#s-shipments').val();
+            let product_type = $('#s-product-type').val();
+            let pub_verify_key = $('input[name=pub_verify_key]').val();
+            let interest = [];
+            let way = [];
+            let platforms = [];
+            $("input[name='s_interest']:checked").each(function() {
+                interest.push($(this).val());
+            });
+            if ($("input[name='s_way']").is(":checked") === true) {
+                $("input[name='s_way']:checked").each(function() {
+                    way.push($(this).val());
+                });
+            }
+            if ($("input[name='s_platform']").is(":checked") === true) {
+                $("input[name='s_platform']:checked").each(function() {
+                    platforms.push($(this).val());
+                });
+            }
+            let additional_comments = $("#additional_comments").val();
+            let params = {
+                full_name: full_name,
+                email: email,
+                company_name: company,
+                phone: phone,
+                interest: interest,
+                how_to_know: way,
+                platforms: platforms,
+                other_platform: other_platform,
+                shipments: shipments,
+                product_type: product_type,
+                additional_comments: additional_comments,
+                pub_verify_key: pub_verify_key,
+            };
+            for (let key in params) {
+                if (!checkValue(params[key], key)) {
+                    return false;
+                }
+            }
+            let loadingIndex = layui.layer.load();
+            let submitBtn = $('#getstarted .layui-layer-btn0');
+            submitBtn.prop('disabled', true);
+
+            $.ajax({
+                url: "/getstarted",
+                type: "POST",
+                dataType: 'json',
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                data: params,
+                success: function(result) {
+                    layui.layer.close(loadingIndex);
+                    if (result.status === 1) {
+                        layui.layer.closeAll();
+                        $('#form-box').hide();
+                        layui.layer.alert('<div class="subJob">Thanks! We appreciate your inquiry and your request has been received. A team member will be in touch within 24-48 hours.</div>', {
+                            title: false,
+                            btn: ['Confirm'],
+                            btn1: function() {
+                                layui.layer.closeAll();
+                            }
+                        }, function() {
+                            layui.layer.closeAll();
+                        });
+                        $('#getStartedFormBox')[0].reset();
+                    } else {
+                        elMsg("Save failed!");
+                    }
+                    submitBtn.prop('disabled', false);
+                },
+                error: function(res) {
+                    layui.layer.close(loadingIndex);
+
+                    let msg = 'Save failed!';
+                    if (res.responseJSON !== undefined && res.responseJSON.message !== undefined) {
+                        msg = res.responseJSON.message;
+                    }
+
+                    elMsg(msg);
+                    submitBtn.prop('disabled', false);
+                    if (msg === 'Wrong verification code') {
+                        vCodeObj.showVCode();
+                    }
+                }
+            });
+        };
+        let layer = layui.layer,
+            form = layui.form,
+            element = layui.element;
+
+        $(".nav li a").each(function() {
+            $this = $(this);
+            if ($this[0].href == String(window.location)) {
+                $this.parents('.eg-navli').addClass("curr");
+            }
+        });
+
+        $(document).on('click', '.started-btn', function() {
+            layer.open({
+                type: 1,
+                area: ['780px', '530px'],
+                title: false,
+                content: $('#getstarted'),
+                btn: ['Submit'],
+                success: function(index, layero) {
+                    $(':focus').blur();
+                    $(index).css({
+                        left: '50%',
+                        'margin-left': '-390px'
+                    });
+                },
+                btn1: function() {
+                    submitStarted();
+                }
+            });
+        });
+
+        form.on('submit(formSubmit)', function(data) {
+
+        });
+
+        $(document).keyup(function(event) {
+            if (event.keyCode == 13) {
+                $('#hidemit').trigger('click');
+            }
+        });
+
+        form.on('checkbox(agreeCheck)', function(data){
+            console.log(data.elem); //得到checkbox原始DOM对象
+            console.log(data.elem.checked); //是否被选中，true或者false
+            console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+            console.log(data.othis); //得到美化后的DOM对象
+        });
+
+
+    })
+
+    $('#agree').on('click', function() {
+        $(this).attr('checked', true);
+        return false;
+    })
+
+    let vCodeObj = {
+        // 刷新验证码
+        refreshVCode: () => {
+        $("#verifyCodeImg").attr("src", "/captcha?r=" + Math.random());
+        },
+
+        // 展示验证码
+        showVCode: () => {
+        $(".verifyBlock").removeClass('layui-hide');
+        vCodeObj.refreshVCode();
+        }
+    }
+</script>
+<style>
+    .layui-layer-btn:after {
+        content: '';
+        clear: both;
+        overflow: hidden;
+        display: block;
+    }
+
+    .layui-layer-btn .layui-layer-btn0 {
+        float: left;
+        border-color: #ff7700 !important;
+        background: #ff7700 !important;
+        color: #fff !important;
+    }
+
+    .layui-layer-btn .layui-layer-btn1 {
+        float: right;
+        border-color: #c9272c !important;
+        background: #c9272c !important;
+        color: #fff !important;
+    }
+    .agree-label{
+        display: flex !important;
+        align-items:center;/*垂直交叉轴居中*/
+    }
+    .agree-label .layui-form-checkbox{
+        margin-right: 5px !important;
+        margin-top: -2px;
+    }
+    #agree-text{
+        display:inline-block;
+        font-size: 14px;
+    }
+</style>    
+    
+    <div class="banner-hm" id="animate">
+        <div class="bannerItem bannerShade" style="background: url(https://www.supersmartservice.co.uk/ssspath/img/banner.jpg) no-repeat center;background-size:cover;"></div>
+    	<div class="wrap-justify wrapper">
+			<div class="wrap-section">
+                <h2 class="fadeInUp animated">
+                    ECOMMERCE FULFILMENT SOLUTIONS
+                </h2>
+                <h3 class="fadeInUp animated">WE FAST-TRACK your business growth</h3>
+                <p class="fadeInUp animated">Smartly . Swiftly . Sorted</p>
+    		</div>
+    	</div>
+        <div class="mouseLight"><span class="scroll"></span></div>
+    </div>
+    <div class="about-hm fclear layout-Screen-banner">
+        <div class="holder-flex Left-box">
+        	<div class="content-col">
+        		<div class="eg-title"><h3>EFFECTIVE AND EFFICIENT Global Logistics Solutions</h3></div>
+        		<div class="content-text">
+        			<p>To maximise profits and take advantage of emerging e-commerce opportunities, your business needs to go wherever your customers are. At Super Smart Service, we enable you to grow without limits, as we are confident our expertise in logistics services that adapt to the present and future needs of your company and your clients.</p>
+                    <p>&nbsp;</p>
+                    <p>Turn your business into an international powerhouse by offering the highest-quality customer service via access to our warehouses throughout the U.S.A, Europe, Asia and Australia. We take care of everything with seamless order fulfilment and logistics, allowing your company to focus completely on expansion without worrying about overhead costs.</p>
+        		</div>
+        		<div class="content-btn"><a class="more-btn" href="ecommerce.html">Learn More</a></div>
+        	</div>
+        </div>
+        <div class="holder-flex">
+            <div class="about-pic" style="background: url(https://www.supersmartservice.co.uk/ssspath/img/about_pic.jpg) no-repeat left center;background-size: cover;"></div>
+        </div>
+    </div>
+    <div class="services-hm">
+    	<ul>
+    		<li>
+    			<a href="ecommerce.html" class="itemBox">
+    				<div class="icon ico1"></div>
+    				<h3>Global Ecommerce Fulfilment</h3>
+    				<div class="ser-text">
+    					<p>B2B specialists, working 7 days per week, less time consuming for
+                            businesses</p>
+    				</div>
+    				<div class="service-btn"><span>Learn More</span></div>
+    			</a>
+    		</li>
+    		<li>
+    			<a href="warehousing.html" class="itemBox">
+    				<div class="icon ico3"></div>
+    				<h3>Warehousing and Distribution</h3>
+                    <div class="ser-text">
+                        <p>Cost effective, seamless, fully trackable solutions
+                        </p>
+                    </div>
+    				<div class="service-btn"><span>Learn More</span></div>
+    			</a>
+    		</li>
+    		<li>
+    			<a href="ournetwork.html" class="itemBox">
+    				<div class="urIcon iconlanguage"></div>
+    				<h3>Global Fulfilment Network</h3>
+                    <div class="ser-text">
+                        <p>Effortless e-commerce integration and customized Fulfilment options around the world
+                        </p>
+                    </div>
+    				<div class="service-btn"><span>Learn More</span></div>
+    			</a>
+    		</li>
+    	</ul>
+    </div>
+
+    <div class="Transp-hm">
+        <div class="eg-title title-center"><h3>UK Fulfilment Warehouse</h3></div>
+        <div class="wrapper box-flex">
+            <div class="side-image"><img src="assets/img-2.png" alt="Fulfilment warehouse interior" /></div>
+            <div class="helf-section">
+                <div class="eg-holder">
+                    <div class="subTitle"><h4>How our fulfilment system works</h4></div>
+                    <div class="tp-text">
+                        <p>
+                            With our cutting-edge order management system (OMS), keeping track of your orders is made easy and effortless during every step of the way: pick up, dispatch, delivery and return management. With our transparent pricing, you have the total control over storage fees, transportation costs, order fulfilment and any value-added services you may require.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-hm">
+        <div class="wrapper">
+        	<div class="eg-title title-center">
+                <h3>Global Fulfilment Network</h3>
+                <p>With our global fulfilment network, we welcome retailers and e-merchants to advance and expand their business</p>
+            </div>
+        	<div class="map-content">
+        		<div class="coordinate-item left-side place-r1">
+        			<span class="red-pointer"></span>
+        			<div class="warehouse-detail"><div class="box-flex">
+        				<div class="house-section">
+                            <div class="item">
+            					<h4 class="with-icon">Aldridge, UK</h4>
+            					<ul class="house-info">
+            						<li><b>Square Footage：</b>120,000</li>
+                                    <li><b>Employees: </b>72</li>
+            					</ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Lichfield, UK</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage：</b>115,000</li>
+                                    <li><b>Employees: </b> 49</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Cannock, UK</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage：</b>376,700</li>
+                                    <li><b>Employees: </b> 60</li>
+                                </ul>
+                            </div>
+        				</div>
+        				<div class="house-pic">
+                            <img src="assets/img-3.jpg" alt="Aldridge, UK warehouse" />
+                            <img src="assets/img-4.jpg" alt="Lichfield, UK warehouse" />
+                            <img src="assets/img-5.jpg" alt="Cannock, UK warehouse" />
+                        </div>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="coordinate-item left-side place-r2">
+        			<span class="red-pointer"></span>
+        			<div class="warehouse-detail"><div class="box-flex">
+        				<div class="house-section">
+                            <div class="item">
+            					<h4 class="with-icon">Paris, France</h4>
+            					<ul class="house-info">
+            						<li><b>Square Footage</b>：120,000</li>
+                                    <li><b>Employees</b>: 5</li>
+            					</ul>
+                            </div>
+        				</div>
+        				<div class="house-pic"><img src="assets/img-6.jpg" alt="Paris, France warehouse" /></div>
+        				</div>
+        			</div>
+        		</div>
+                <div class="coordinate-item left-side place-r3">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Madrid, Spain</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：11,00</li>
+                                    <li><b>Employees</b>: 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-7.jpg" alt="Madrid, Spain warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item right-side place-r4">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Australia,Melbourne</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：65,000</li>
+                                    <li><b>Employees</b>: 17</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-8.jpg" alt="Melbourne, Australia warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r5">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse_dright"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Prague 1, Czech</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：94,000</li>
+                                    <li><b>Employees</b>: 32</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Prague 2, Czech</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：94,000</li>
+                                    <li><b>Employees</b>: 23</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Prague 3, Czech</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：180,000</li>
+                                    <li><b>Employees</b>: 60</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-9.jpg" alt="Prague 1, Czech warehouse" /><img src="assets/img-10.jpg" alt="Prague 2, Czech warehouse" /><img src="assets/img-11.jpg" alt="Prague 3, Czech warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r9">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Frankfurt, Germany</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：21,000</li>
+                                    <li><b>Employees</b>: 20</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-12.jpg" alt="Frankfurt, Germany warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r6">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Turin, Italy</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：11,000</li>
+                                    <li><b>Employees</b>: 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-13.jpg" alt="Turin, Italy warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r7">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse_dright"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">New Jersey 1, US East</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：170,000</li>
+                                    <li><b>Employees</b>: 85</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">New Jersey 2, US East</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：370,000</li>
+                                    <li><b>Employees</b>: 110</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">New Jersey 3, US East</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：200,000</li>
+                                    <li><b>Employees</b>: 40</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">New Jersey 4, US East</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：150,000</li>
+                                    <li><b>Employees</b>: 30</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-14.jpg" alt="New Jersey 1, US East warehouse" /><img src="assets/img-15.jpg" alt="New Jersey 2, US East warehouse" /><img src="assets/img-16.jpg" alt="New Jersey 3, US East warehouse" /><img src="assets/img-17.jpg" alt="New Jersey 4, US East warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coordinate-item left-side place-r8">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">LAX Airport</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：25,000</li>
+                                    <li><b>Employees</b>: 20</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-18.jpg" alt="LAX Airport warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r12">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Ramona CA</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：380,000</li>
+                                    <li><b>Employees</b>: 220</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Los Angeles 1, US west</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：200,000</li>
+                                    <li><b>Employees</b>: 35</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h4 class="with-icon">Los Angeles 2, US west</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：330,000</li>
+                                    <li><b>Employees</b>: 44</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-18.jpg" alt="Ramona CA warehouse" /><img src="assets/img-19.jpg" alt="Los Angeles warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r10">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Newport DE</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：5,000</li>
+                                    <li><b>Employees</b>: 5</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-20.jpg" alt="Newport DE warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item left-side place-r13">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Atlanta GA</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：498,000</li>
+                                    <li><b>Employees</b>: 150</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-21.jpg" alt="Atlanta GA warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coordinate-item right-side place-r11">
+                    <span class="red-pointer"></span>
+                    <div class="warehouse-detail"><div class="box-flex">
+                        <div class="house-section">
+                            <div class="item">
+                                <h4 class="with-icon">Shenzhen,China</h4>
+                                <ul class="house-info">
+                                    <li><b>Square Footage</b>：100,000</li>
+                                    <li><b>Employees</b>: 1000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="house-pic"><img src="assets/img-22.jpg" alt="Shenzhen, China warehouse" /></div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+
+    <div class="number-board">
+     <div class="wrapper">
+           <ul class="digital">
+                <li><div class="box-holder">
+                <div class="nb-icon bi1"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 20, "animate_duration": 1, "locale": "en-US"}'>0</em></h3>
+                   <p>Warehouses</p></div></li>
+              <li><div class="box-holder">
+                <div class="nb-icon bi2"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 8, "animate_duration": 1, "locale": "en-US"}'>0</em></h3>
+                 <p>Countries</p></div></li>
+               <li><div class="box-holder">
+                <div class="nb-icon bi4"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 2.5, "animate_duration": 1, "locale": "en-US"}'>0</em>MM+</h3>
+                    <p>Square Feet Warehouse Space</p></div></li>
+             <li><div class="box-holder">
+                <div class="nb-icon bi5"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 29, "animate_duration": 1, "locale": "en-US"}'>0</em>MM+</h3>
+                 <p>Packages Shipped Annually</p></div></li>
+               <li><div class="box-holder">
+                <div class="nb-icon bi6"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 10, "animate_duration": 1, "locale": "en-US"}'>0</em>+</h3>
+                   <p>Years of Logistic Experience</p></div></li>
+                <li><div class="box-holder">
+                <div class="nb-icon bi7"></div><h3><em class="counter-numb" data-lem-counter='{"value_from": 0, "value_to": 1000, "animate_duration": 1, "locale": "en-US"}'>0</em>+</h3>
+                 <p>Clients</p></div></li>
+         </ul>
+     </div>
+    </div>
+
+    
+    <div class="wrapper partner-hm">
+    	<div class="eg-title title-center"><h3>Who we work with</h3></div>
+    	<div class="partner-box swiper-container partnerWith">
+    		<ul class="swiper-wrapper">
+    			<li class="swiper-slide"><img src="assets/img-23.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="assets/img-24.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo2.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo5.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo15.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo16.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo18.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo10.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo21.jpg" alt="Partner logo" /></li>
+                <li class="swiper-slide"><img src="https://www.supersmartservice.co.uk/ssspath/img/partnerlogo20.jpg" alt="Partner logo" /></li>
+    		</ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    	</div>
+    </div>
+    
+    
+    <div id="footer">
+    <div class="wrapper">
+        <ul class="foot-menu box-flex">
+            <li class="ft-item">
+                <h3>Services</h3>
+                <ul class="ft-tabs">
+                    <li><a href="ecommerce.html">E-commerce Fulfilment</a></li>
+                    <li><a href="warehousing.html">Warehousing and Distribution</a></li>
+                </ul>
+            </li>
+            <li class="ft-item">
+                <h3>Quick Links</h3>
+                <ul class="ft-tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </li>
+            <li class="ft-item" style="width: 42% !important;">
+                <h3>Get In Touch</h3>
+                <ul class="ft-tabs">
+                    <li>
+                        <i class="frontIcon"><img src="https://www.supersmartservice.co.uk/ssspath/img/icon55.png" alt="Location"></i>
+                        <a target="_blank" href="https://www.google.com/maps/place/Super+Smart+Service/@52.6751644,-2.0119068,17z/data=!3m1!4b1!4m5!3m4!1s0x48709feff6aa8eed:0x56a55acafd7003af!8m2!3d52.6751644!4d-2.0097181">
+                            Super Smart Service, Cley Road, Kingswood Lakeside, Cannock, Staffordshire, WS11 8AA
+                        </a>
+                    </li>
+                    <li>
+                        <i class="frontIcon"><img src="https://www.supersmartservice.co.uk/ssspath/img/email2.png" alt="Email"></i>
+                        <a  href="mailto:partnerships@supersmartservice.co.uk">partnerships@supersmartservice.co.uk</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="ft-item">
+                <h3>Follow</h3>
+                <div class="society">
+                    <a target="_blank" href="https://www.facebook.com/uksupersmartservice/" class="facebook icon1" aria-label="Facebook"></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/super-smart-service-ltd/" class="Linkedin icon4" aria-label="LinkedIn"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="copyright">
+        <div class="wrapper">
+            <p>Copyright © Super Smart Service Ltd 2020. All right reserved.</p>
+        </div>
+    </div>
+</div>    
+    
+    <script>
+    var swiper = new Swiper('.clientLogo', {
+      slidesPerView: 4,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    var swiper = new Swiper('.partnerWith', {
+      slidesPerView: 5,
+      slidesPerColumn: 2,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        //窗口显示才加载
+        dynamicNumber();
+        $('body').on('touchstart',function(){
+            $('.video-banner video').trigger('play');
+        })
+    });
+    layui.use('layer',function(){
+        var layer = layui.layer;
+
+    });
+
+    function dynamicNumber() {
+        if (isMobile()) {
+            $('.counter-numb').lemCounter();
+            return;  
+        }
+
+        let wrapTop = $(".digital").offset().top;
+        let istrue = true;
+        $(window).on("scroll", function() {
+            let s = $(window).scrollTop();
+            if (s > wrapTop - 1500 && istrue) {
+                $('.counter-numb').lemCounter();
+                istrue = false;
+            };
+        });
+    }
+</script>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
