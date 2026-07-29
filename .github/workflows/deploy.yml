@@ -1,0 +1,99 @@
+name: Build, Test, and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  IMAGE_NAME: static-site
+
+jobs:
+  lint-and-validate:
+    name: Lint & Validate HTML/CSS/JS
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Validate HTML files exist and are well-formed (basic check)
+        run: |
+          set -e
+          for f in *.html; do
+            echo "Checking $f"
+            grep -q "<html" "$f" || (echo "Missing <html> tag in $f" && exit 1)
+          done
+
+      - name: Lint JavaScript (syntax check via Node, no build/deps)
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: "20.17.0"
+
+      - name: Check script.js syntax
+        run: node --check script.js
+
+  docker-build-test:
+    name: Build Docker Image & Health Check
+    runs-on: ubuntu-24.04
+    needs: lint-and-validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3.7.1
+
+      - name: Build image
+        uses: docker/build-push-action@v6.9.0
+        with:
+          context: .
+          file: ./Dockerfile
+          target: production
+          load: true
+          tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run container
+        run: |
+          docker run -d --name test-container -p 8080:8080 ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Wait for container health
+        run: |
+          for i in $(seq 1 15); do
+            status=$(docker inspect --format='{{.State.Health.Status}}' test-container || echo "starting")
+            echo "Health status: $status"
+            if [ "$status" = "healthy" ]; then
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Container failed to become healthy"
+          docker logs test-container
+          exit 1
+
+      - name: Smoke test HTTP response
+        run: |
+          curl -fsS http://localhost:8080/healthz
+          curl -fsS http://localhost:8080/ | grep -qi "<html" 
+
+      - name: Cleanup
+        if: always()
+        run: docker rm -f test-container || true
+
+  deploy:
+    name: Deploy to Render
+    runs-on: ubuntu-24.04
+    needs: docker-build-test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Trigger Render Deploy Hook
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$RENDER_DEPLOY_HOOK_URL" ]; then
+            echo "RENDER_DEPLOY_HOOK_URL secret not set. Skipping deploy trigger."
+            exit 1
+          fi
+          curl -fsS -X POST "$RENDER_DEPLOY_HOOK_URL"

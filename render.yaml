@@ -1,0 +1,17 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: static-site
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: oregon
+    autoDeploy: true
+    healthCheckPath: /healthz
+    envVars:
+      - key: TZ
+        value: UTC
+    # Render assigns and injects PORT automatically; nginx.conf listens on
+    # 8080 which matches Render's default container port expectation.
+    numInstances: 1
